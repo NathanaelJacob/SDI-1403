@@ -58,3 +58,31 @@ var loadMachine = function(whites, amountOfClothes) {
 	return dirtyClothes;
 }
 
+//start the story
+console.log("You grab your basket of dirty clothes.");
+console.log("You walk into the laundry room and set down the basket in front of the washer.");
+
+temp = prompt("Would you like to use hot or cold water for the washer?", "hot");
+turnOnWater(temp);
+
+numClothes = prompt("How many items of clothes are you washing?", 20);
+//Find out if this is a whites only load
+whites = confirm("Do you want to wash only whites?");
+dirtyClothesLeft = loadMachine(whites, numClothes);
+//measure detergent in milliliters
+mLofSoap = getSoapAmount(numClothes);
+
+typeOfSoap = prompt("What kind of detergent are you using?", "Tide");
+typeOfSoftner = prompt("What kind of fabric softner are you using?", "Febreeze");
+typesOfLiquids = addSoapAndSoftner(typeOfSoap, typeOfSoftner);
+
+
+//execute all actions
+console.log("You add " + mLofSoap + "ml of detergent to the load.");
+console.log(typesOfLiquids);
+
+if (dirtyClothesLeft) {
+	console.log("You didn't have enough space for your whole load, apparently. Guess you'll have to do another later.");
+}
+console.log("You close the washer door.");
+console.log("You press the start button.");
