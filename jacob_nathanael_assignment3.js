@@ -104,4 +104,26 @@ typeOfSoap = prompt("What kind of detergent are you using?", "Tide");
 typeOfSoftner = prompt("What kind of fabric softner are you using?", "Febreeze");
 typesOfLiquids = addSoapAndSoftner(typeOfSoap, typeOfSoftner);
 
+//execute all actions
+console.log("You add " + mLofSoap + "ml of detergent to the load.");
+console.log(typesOfLiquids);
+
+//add money to the machine
+console.log("Clothes are loaded, but the machine needs to be paid first.");
+quarters = prompt("How many quarters do you want to use?", 3);
+dimes = prompt("How many dimes do you want to use?", 2);
+nickels = prompt("How many nickels do you want to use?", 1);
+//initiate array of values for the coins that are provided
+myCoins.push(25*quarters);
+myCoins.push(10*dimes);
+myCoins.push(5*nickels);
+//if coins value isn't enough, keep asking for more money and call addCoins with coin array again
+while (addCoins(myCoins) == false) {
+	console.log("You didn't add enough money.");
+	quarters = prompt("Add more quarters?", 1);
+	coins.push(quarters);
+}
+console.log("The machine is satisfied now.");
+console.log("You close the washer door.");
+console.log("You press the start button.");
 
