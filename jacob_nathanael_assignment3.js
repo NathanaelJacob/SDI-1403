@@ -78,3 +78,30 @@ var loadMachine = function(clothesInfo) {
 	return clothesLoaded;
 }
 
+//start the story
+console.log("You grab your basket of dirty clothes.");
+console.log("You walk into the laundry room and set down the basket in front of the washer.");
+
+temp = prompt("Would you like to use hot or cold water for the washer?", "hot");
+turnOnWater(temp);
+
+//initiate an object with info about the laundry
+var laundry = {
+	"types": [
+		{ "name":"shirts", "amount": 9, "fabrics": ["cloth", "wool", "polyester", "cotton"]},
+		{ "name":"pants", "amount": 4, "fabrics": ["khaki", "denim"]},
+		{ "name":"socks", "amount": 12, "fabrics": ["wool", "cotton"]},
+		{ "name":"briefs", "amount": 10, "fabrics": ["cotton"]},
+		{ "name":"towels", "amount": 2, "fabrics": ["cotton"]}
+		],
+	"whites": false
+};
+numClothes = loadMachine(laundry);
+//measure detergent in milliliters
+mLofSoap = getSoapAmount(laundry);
+
+typeOfSoap = prompt("What kind of detergent are you using?", "Tide");
+typeOfSoftner = prompt("What kind of fabric softner are you using?", "Febreeze");
+typesOfLiquids = addSoapAndSoftner(typeOfSoap, typeOfSoftner);
+
+
