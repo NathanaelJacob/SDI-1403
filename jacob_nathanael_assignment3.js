@@ -5,6 +5,7 @@ alert("JavaScript works!");
 // Assignment 3
 
 //GLOBAL VARIABLES
+
 var name = prompt("What is your name?", "Nate");
 var temp = "", dirtyClothesLeft = true, whites = false;
 var mLofSoap = 0, numClothes = 0, typeOfSoap = "", typeOfSoftner = "", typesOfLiquids = "", scoopsOfBleachAdded = 0;
