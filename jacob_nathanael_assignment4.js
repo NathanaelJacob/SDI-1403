@@ -46,3 +46,16 @@ function titleCase(str) {
 	}
 	return words.join(" ");
 }
+
+//Fuzzy match a number above or below another number within given percent
+function fuzzyMatch(number1, number2, percentage) {
+	var ratio, match;
+	if (number1 > number2) {
+		ratio = number2/number1;
+	}
+	else {
+		ratio = number1/number2;
+	}
+	match = (ratio * 100) >= percentage;
+	return match;
+}
