@@ -17,3 +17,13 @@ function smallestGreaterThan(array, number) {
 	}
 	return null;
 }
+
+//Find the total value of just the numbers in an array, even if some of the items are not numbers
+function sumArray(array) {
+	var sum = 0;
+	for (var i = 0; i < array.length; i++) {
+		if (typeof array[i] == 'number')
+			sum += array[i];
+	}
+	return sum;
+}
