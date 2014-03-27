@@ -32,3 +32,8 @@ function sumArray(array) {
 function stringToNumber(str) {
 	return parseInt(str);
 }
+
+//Format a number to use a specific number of decimal places
+function formatNumber(number, decimalPlaces) {
+	return parseFloat(number).toFixed(decimalPlaces);
+}
