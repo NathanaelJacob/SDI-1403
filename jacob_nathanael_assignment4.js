@@ -37,3 +37,12 @@ function stringToNumber(str) {
 function formatNumber(number, decimalPlaces) {
 	return parseFloat(number).toFixed(decimalPlaces);
 }
+
+//Turn each word in a string to start with a caoital letter
+function titleCase(str) {
+	var words = str.split(" ");
+	for (var i = 0; i < words.length; i++) {
+		words[i] = words[i].charAt(0).toUpperCase() + words[i].substring(1);
+	}
+	return words.join(" ");
+}
