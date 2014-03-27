@@ -59,3 +59,44 @@ function fuzzyMatch(number1, number2, percentage) {
 	match = (ratio * 100) >= percentage;
 	return match;
 }
+
+//Test each program
+var array = [2,5,7,2,65,23,13,10,4,8,19];
+var number = 10;
+var smallestValue = smallestGreaterThan(array, number);
+console.log("Smallest value in " + array + " greater than " + number + ": " + smallestValue);
+number = 25;
+smallestValue = smallestGreaterThan(array, number);
+console.log("Smallest value in " + array + " greater than " + number + ": " + smallestValue);
+
+var sum = sumArray(array);
+console.log("The sum of the array is " + sum);
+array = [2,5,7,"hello",2,65,false,23,13,"125",10,4,8,{ name: 'test' },19];
+sum = sumArray(array);
+console.log("The sum of the array with non-number elements is " + sum);
+
+var str = "42";
+number = stringToNumber(str);
+console.log("The number value of the string '" + str + "' is " + number);
+
+var longDecimal = 12.257389098762;
+var shortDecimal = formatNumber(longDecimal, 2);
+console.log("Trimming " + longDecimal + " down to 2 decimal places: " + shortDecimal);
+
+var lowerCaseStr = "the quick brown fox jumped over the fence";
+var titleCaseStr = titleCase(lowerCaseStr);
+console.log("Title case the string '" + lowerCaseStr + "' --> '" + titleCaseStr + "'");
+
+var num1 = 87, num2 = 58;
+var isFuzzyMatched = fuzzyMatch(num1, num2, 70);
+console.log("Is " + num1 + " within 70% of " + num2 + "? ");
+if (isFuzzyMatched) 
+	console.log("Yes!");
+else
+	console.log("No!");
+isFuzzyMatched = fuzzyMatch(num1, num2, 50);
+console.log("Is " + num1 + " within 50% of " + num2 + "? ");
+if (isFuzzyMatched) 
+	console.log("Yes!");
+else
+	console.log("No!");
