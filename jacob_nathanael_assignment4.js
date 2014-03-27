@@ -27,3 +27,8 @@ function sumArray(array) {
 	}
 	return sum;
 }
+
+//Return value of string version of a number
+function stringToNumber(str) {
+	return parseInt(str);
+}
